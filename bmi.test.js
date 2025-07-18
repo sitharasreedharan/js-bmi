@@ -18,7 +18,8 @@ function measureBMI () {
     // METRIC BMI = MASS (KG) / HEIGHT (M) SQUARE
       height = height / 100;
       bmi = weight / (height * height);
-    // ROUND OFF - 2 DECIMAL PLACES
+    // ROUND O
+    // FF - 2 DECIMAL PLACES
       bmi = Math.round(bmi * 100) / 100;
       
     // (B3) SHOW RESULTS
@@ -37,6 +38,10 @@ function measureBMI () {
     }
   }
 
-test("Unit test I", () => {
+test("Unit test 1:54kg, 157cm", () => {
+  expect(calcBMI(54, 157)).toBe("21.91 - Normal weight");
+});
 
+test("Unit test 2: 45kg, 160cm", () => {
+  expect(calcBMI(45, 160)).toBe("17.58 - Underweight");
 });
